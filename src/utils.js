@@ -10,6 +10,7 @@ import {
 
 export function calcFocusDate(currentFocusedDate, props) {
   const { shownDate, date, months, ranges, focusedRange, displayMode } = props;
+
   // find primary date according the props
   let targetInterval;
   if (displayMode === 'dateRange') {
@@ -46,10 +47,10 @@ export function calcFocusDate(currentFocusedDate, props) {
 
 export function findNextRangeIndex(ranges, currentRangeIndex = -1) {
   const nextIndex = ranges.findIndex(
-    (range, i) => i > currentRangeIndex && range.autoFocus !== false && !range.disabled
+    (range, i) => i > currentRangeIndex && range.autoFocus !== false
   );
   if (nextIndex !== -1) return nextIndex;
-  return ranges.findIndex(range => range.autoFocus !== false && !range.disabled);
+  return ranges.findIndex(range => range.autoFocus !== false);
 }
 
 export function getMonthDisplayRange(date, dateOptions) {

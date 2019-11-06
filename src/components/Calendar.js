@@ -244,7 +244,7 @@ class Calendar extends PureComponent {
     return (
       <div className={styles.dateDisplayWrapper}>
         {ranges.map((range, i) => {
-          if (range.showDateDisplay === false || (range.disabled && !range.showDateDisplay))
+          if (range.showDateDisplay === false || !range.showDateDisplay)
             return null;
           return (
             <div

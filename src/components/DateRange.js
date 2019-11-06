@@ -59,11 +59,11 @@ class DateRange extends Component {
     );
 
     if (inValidDatesWithinRange.length > 0) {
-      if (isStartDateSelected) {
-        startDate = addDays(max(inValidDatesWithinRange), 1);
-      } else {
-        endDate = addDays(min(inValidDatesWithinRange), -1);
-      }
+      // if (isStartDateSelected) {
+      //   startDate = addDays(max(inValidDatesWithinRange), 1);
+      // } else {
+      //   endDate = addDays(min(inValidDatesWithinRange), -1);
+      // }
     }
 
     if (!nextFocusRange) {
